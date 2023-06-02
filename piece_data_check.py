@@ -22,8 +22,8 @@ if upload_file_2:
 st.subheader('Comparison Table') 
 
 if upload_file_1 and upload_file_2: 
-    df1['Piece Name'] = df1['Piece Name'] + '_'+df1['Size']
-    df2['Piece Name'] = df2['Piece Name'] +'_'+ df2['Size']
+    df1['Piece Name'] = df1['Piece Name'] + '_'+df1['Size'].astype(str)
+    df2['Piece Name'] = df2['Piece Name'] +'_'+ df2['Size'].astype(str)
 
     df1.drop(['Size', 'Marker Date/Time', 'User Last Mod', 'Created Time', 'User Created','Prev Mod Time','User Prev Mod'], axis=1, inplace = True)
     df2.drop(['Size', 'Marker Date/Time', 'User Last Mod', 'Created Time', 'User Created','Prev Mod Time','User Prev Mod'], axis=1, inplace = True)
